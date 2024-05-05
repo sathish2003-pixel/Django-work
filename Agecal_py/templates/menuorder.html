@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Bill</title>
+    <link rel="stylesheet" href="restaurant-bill.css">
+    <style>
+        /* restaurant-bill.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.bill {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.bill h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.bill p {
+    margin-bottom: 10px;
+}
+
+.bill-items {
+    margin-top: 20px;
+}
+
+.bill-items table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bill-items th, .bill-items td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.bill-items th {
+    background-color: #333;
+    color: #fff;
+}
+
+.bill-items td {
+    background-color: #f9f9f9;
+}
+
+.bill-items tr:nth-child(even) td {
+    background-color: #e9e9e9;
+}
+
+.bill-total {
+    margin-top: 20px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.bill-total p {
+    margin-bottom: 10px;
+}
+
+.bill-total p:last-child {
+    margin-bottom: 0;
+}
+
+.bill p:last-child {
+    margin-bottom: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="bill">
+        <h2>Spicy Kitchen</h2>
+        <p>Date: 05/04/2023</p>
+        <p>Customer name:{{name}}</p>
+        <p>Phone number:{{phone}}</p>
+        <div class="bill-items">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{dish}}</td>
+                        <td>{{quantity}}</td>
+                        <td>{{price}}</td>
+                    </tr>
+                    <!-- Add more items as needed -->
+                </tbody>
+            </table>
+        </div>
+        <div class="bill-total">
+            <p>Subtotal:{{price}}</p>
+            <p></p>
+            <p>Total:{{price}}</p>
+        </div>
+        <p>Thank you for dining with us!</p>
+    </div>
+</body>
+</html>

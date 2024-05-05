@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Name - Menu</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming you have a CSS file for styling -->
+    <style>
+        /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: white;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.dish {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+}
+img{
+    width: 200px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="menu">
+        <h1>Our Menu</h1>
+        <div class="menu-section">
+            <h2>Main Courses</h2>
+            <div class="dish">
+                <h3>Dosa</h3>
+                <p>Rs:50</p>
+            </div>
+            <div class="dish">
+                <img src="./Idly19.jpg" alt="">
+                <h3>Idly</h3>
+                <p>Rs:20</p>
+            </div>
+            <div class="dish">
+                <img src="./pongal.jpg" alt="">
+                <h3>Pongal</h3>
+                <p>Rs:50</p>
+            </div>
+            <!-- Add more main courses as needed -->
+        </div>
+        <h1>Place Your Order</h1>
+        <form action="/Age/order/" method="post">
+            {%csrf_token%}
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            <label for="name">Dish name:</label>
+            <input type="text" id="dish" name="dish" required><br><br>
+            <label for="name">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required><br><br>
+            <input type="submit" value="order">
+            <br><br>
+            <br><br>
+        </form>
+        
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Restaurant Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
